@@ -26,18 +26,18 @@ public abstract class SQLiteWeatherStore implements WeatherStore {
         return conn;
     }
 
-    // Método para crear la tabla WeatherData
-    public void initializeDatabase() {
-        String sql = "CREATE TABLE IF NOT EXISTS WeatherData (" +
+    // Método para crear la tabla islandNames
+    public void initializeDatabase(String islandNames) {
+        String sql = "CREATE TABLE IF NOT EXISTS " + islandNames + "(" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "temperature FLOAT," +
+                "temperature REAL," +
                 "humidity INTEGER," +
-                "rain FLOAT," +
-                "windSpeed FLOAT," +
-                "clouds FLOAT," +
+                "rain REAL," +
+                "windSpeed REAL," +
+                "clouds REAL," +
                 "locationName TEXT," +
-                "latitude FLOAT," +
-                "longitude FLOAT," +
+                "latitude REAL," +
+                "longitude REAL," +
                 "timestamp TEXT)";
 
         try (Connection conn = this.connect();
