@@ -12,9 +12,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         List<Location> locations = loadLocationsFromFile("/dacd/IglesiasDario/locations.tsv");
