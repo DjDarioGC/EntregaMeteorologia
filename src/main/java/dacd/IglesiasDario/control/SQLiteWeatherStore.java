@@ -15,7 +15,7 @@ public abstract class SQLiteWeatherStore implements WeatherStore {
     public SQLiteWeatherStore() {
     }
     private Connection connect() {
-        // Conexión a la base de datos SQLite
+        // Conexión base de datos SQLite
         String url = "jdbc:sqlite:weather_forecast.db"; // Reemplaza con tu ruta de base de datos
         Connection conn = null;
         try {
