@@ -18,7 +18,6 @@ import java.io.FileReader;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         List<Location> locations = loadLocationsFromFile("/dacd/IglesiasDario/locations.tsv");
-        BufferedReader reader = new BufferedReader(new FileReader("locations.tsv"));
 
         WeatherProvider weatherProvider = new OpenWeatherMapProvider();
         WeatherStore weatherStore = new SQLiteWeatherStore() {

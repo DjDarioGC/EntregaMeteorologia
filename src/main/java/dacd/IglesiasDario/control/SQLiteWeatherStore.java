@@ -12,10 +12,7 @@ import java.time.Instant;
 
 public abstract class SQLiteWeatherStore implements WeatherStore {
 
-    private static final String DATABASE_URL = "jdbc:sqlite:weather_forecast.db";
-
     public SQLiteWeatherStore() {
-        initializeDatabase();
     }
     private Connection connect() {
         // Conexión a la base de datos SQLite
