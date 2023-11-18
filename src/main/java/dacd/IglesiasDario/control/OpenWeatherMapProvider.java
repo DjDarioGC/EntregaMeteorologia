@@ -60,7 +60,6 @@ public class OpenWeatherMapProvider implements WeatherProvider {
             }
         } catch (IOException e) {
             e.printStackTrace();
-            // Podrías lanzar una excepción personalizada o manejar el error de manera diferente
         }
         return weathers;
     }
