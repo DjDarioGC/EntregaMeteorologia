@@ -12,14 +12,14 @@ import java.time.Instant;
 
 public abstract class SQLiteWeatherStore implements WeatherStore {
 
-    private static final String DATABASE_URL = "jdbc:sqlite:path_to_your_database.db";
+    private static final String DATABASE_URL = "jdbc:sqlite:weather_forecast.db";
 
     public SQLiteWeatherStore() {
         initializeDatabase();
     }
     private Connection connect() {
         // Conexión a la base de datos SQLite
-        String url = "jdbc:sqlite:path_to_your_database.db"; // Reemplaza con tu ruta de base de datos
+        String url = "jdbc:sqlite:weather_forecast.db"; // Reemplaza con tu ruta de base de datos
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);
